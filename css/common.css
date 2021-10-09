@@ -8,8 +8,8 @@ body {
     'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #212121; /* #fafafa */
-  color: #fafafa; /* #212121 */
+  background-color: #fafafa;
+  color: #212121;
   line-height: 1.5;
 }
 

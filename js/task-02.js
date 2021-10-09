@@ -1,11 +1,13 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatoes', 'Herbs', 'Condiments'];
+const ingredientsList = document.querySelector('ul#ingredients');
 
-const items = ingredients.reduce((acc, itemText) => {
-  const li = document.createElement('li');
-  li.classList.add('item');
-  li.textContent = itemText;
-  acc.push(li);
-  return acc;
-}, []);
+const makeMarkup = array => {
+  return array.map(elem => {
+    const li = document.createElement('li');
+    li.textContent = elem;
+    li.classList.add('item');
+    return li;
+  });
+};
 
-document.querySelector('ul#ingredients').append(...items);
+ingredientsList.append(...makeMarkup(ingredients));

@@ -1,7 +1,9 @@
 const inputRef = document.querySelector('#validation-input');
 
-const isLengthValid = ({ target: { classList: c, value: v, dataset: d } }) => {
-  v.length < d.length ? c.add('invalid') & c.remove('valid') : c.add('valid') & c.remove('invalid');
+const isLengthValid = ({ currentTarget: { classList, value, dataset } }) => {
+  value.length < dataset.length
+    ? classList.add('invalid') & classList.remove('valid')
+    : classList.add('valid') & classList.remove('invalid');
 };
 
 inputRef.addEventListener('blur', isLengthValid);
